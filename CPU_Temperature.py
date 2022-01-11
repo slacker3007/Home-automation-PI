@@ -2,6 +2,7 @@ from gpiozero import CPUTemperature
 import statistics
 import time
 
+
 cpu = CPUTemperature()
 cpu = str(cpu).replace("<gpiozero.CPUTemperature object temperature=", "")
 cpu = str(cpu).replace(">", "")
