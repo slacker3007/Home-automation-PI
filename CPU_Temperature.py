@@ -1,7 +1,10 @@
+# Takes CPU tempture 5 times calc avg. value 
+# with crontab runs the script each min and saves values to text_exporter folder
+# node_exporter adds metrics which are picked up by Prometheus and pushed to grafana
+
 from gpiozero import CPUTemperature
 import statistics
 import time
-
 
 cpu = CPUTemperature()
 cpu = str(cpu).replace("<gpiozero.CPUTemperature object temperature=", "")
