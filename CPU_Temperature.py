@@ -1,6 +1,7 @@
 # Takes CPU tempture 5 times calc avg. value 
 # with crontab runs the script each min and saves values to text_exporter folder
 # node_exporter adds metrics which are picked up by Prometheus and pushed to grafana
+# if using crontab, have to use python3 as it admin mode it will take default version 2, even if aliase is created
 
 from gpiozero import CPUTemperature
 import statistics
